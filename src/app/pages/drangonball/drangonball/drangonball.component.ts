@@ -17,6 +17,11 @@ interface Character {
 })
 export class DrangonballComponent {
 
+  name = signal('Gohan');
+  power = signal(1000);
+
+
+
   characters = signal<Character[]>([
     { id: 1, name: 'Goku', power: 9001 },
     { id: 2, name: 'Vegeta', power: 8000 },
