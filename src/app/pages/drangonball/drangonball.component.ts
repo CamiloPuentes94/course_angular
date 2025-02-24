@@ -17,23 +17,23 @@ interface Character {
 })
 export class DrangonballComponent {
 
-  name = signal('Gohan');
-  power = signal(1000);
+  name = signal('');
+  power = signal(0);
 
 
 
   characters = signal<Character[]>([
     { id: 1, name: 'Goku', power: 9001 },
-    { id: 2, name: 'Vegeta', power: 8000 },
-    { id: 3, name: 'piccolo', power: 3000 },
-    { id: 3, name: 'Yamcha', power: 400 },
+    // { id: 2, name: 'Vegeta', power: 8000 },
+    // { id: 3, name: 'piccolo', power: 3000 },
+    // { id: 3, name: 'Yamcha', power: 400 },
   ])
 
-  powerClasses = computed(() => {
-    return {
-      'text-danger': true,
-    }
-  })
+  // powerClasses = computed(() => {
+  //   return {
+  //     'text-danger': true,
+  //   }
+  // })
 
   addCharacter() {
     if(!this.name() || !this.power() || this.power() < 0) {
